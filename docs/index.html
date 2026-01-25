@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigma Lab</title>
+    <title>Sigma Lab | Business & Policy Consulting</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Apex&display=swap">
     <style>
@@ -16,13 +16,6 @@
             background-color: #0E0E16;
             color: #EAEAEA;
         }
-        
-      .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 80px; /* Add margin-top to prevent overlap with header */
-}
 
         h1, h2, h3 {
             margin-top: 0;
@@ -37,7 +30,7 @@
 
         h2 {
             font-size: 36px;
-            margin-top: 0px;
+            margin-top: 0;
         }
 
         p {
@@ -45,38 +38,40 @@
             text-align: center; 
             font-size: 18px; 
         }
-h4 {
-margin-top: 0;
-text-align: center;
-font-size: 12px; 
-}
-.header {
-    display: flex; /* Ensures that header items are displayed in a row */
-    align-items: center; /* Vertically centers the items */
-    padding: 10px 20px;
-    background-color: #1F1F2E; /* Header background */
-    z-index: 1000; /* Ensures it stays above other content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
 
-.header-content {
-    display: flex;
-    align-items: center; /* Vertically centers logo and title */
-    margin-right: auto; /* Pushes the menu to the right */
-}
+        h4 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 12px; 
+        }
 
-.header img {
-    height: 50px;
-    margin-right: 10px;
-}
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1F1F2E;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
 
-.header h1 {
-    font-size: 24px; /* Adjust the size if needed */
-    margin: 5px 0; /* Add a bit of top margin to lower the text */
-}
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
         nav {
             text-align: center;
-            margin-bottom: 5px;
         }
 
         nav a {
@@ -91,51 +86,58 @@ font-size: 12px;
             color: #4B9CD3;
         }
 
-
         .menu {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding:  0;
         }
 
-        .menu a {
-            font-size: 18px;
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
         }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    overflow: hidden;
-    background-image: url('northern-lights.jpg');
-    background-attachment: fixed; /* Enables the parallax effect */
-    background-size: cover;
-    background-position: center;
-    color: #EAEAEA;
-    height: 110vh; /* Full viewport height */
-    display: flex; /* Center content vertically */
-    align-items: center; /* Center items */
-    justify-content: center; /* Center items */
-    text-align: center; /* Center text */
-}
+        .menu-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #EAEAEA;
+            margin: 4px auto;
+            transition: background-color 0.3s ease;
+        }
 
-.container {
-    position: relative;
-    z-index: 1; /* Keep the content above the background */
-}
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background-image: url('northern-lights.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: #EAEAEA;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-.hero h1 {
-    font-size: 47px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-}
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
 
-.hero p {
-  font-size: 24px;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+        .hero h1 {
+            font-size: 47px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
 
         .background-video {
             position: fixed;
@@ -147,6 +149,32 @@ font-size: 12px;
             filter: drop-shadow(16px 16px 20px blue) opacity(50%);
         }
 
+        section.container {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            margin-bottom: 40px;
+            color: #4B9CD3;
+        }
+
+        .paragraph-list p {
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .services-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            margin-bottom: 15px;
+        }
 
         .contact-form {
             background-color: transparent;
@@ -155,18 +183,14 @@ font-size: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
-         
         }
-.contact-form h2 {
-  margin-bottom: 20px;
 
-}
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
             width: 100%;
             max-width: 400px;
-            min-width: 300px; /* Set a minimum width for smaller screens */
+            min-width: 300px;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #4B9CD3;
@@ -192,16 +216,6 @@ font-size: 12px;
         .contact-form input[type="submit"]:hover {
             background-color: #357B9C;
         }
-.contact-form textarea {
-  height: 150px;
-}
-
-        footer {
-            background-color: transparent;
-            padding: 40px;
-            text-align: center;
-            color: #EAEAEA;
-        }
 
         footer {
             background-color: transparent;
@@ -213,217 +227,152 @@ font-size: 12px;
         @media only screen and (max-width: 768px) {
             .menu {
                 display: none;
- background-image: url('northern-lights.jpg');
-    background-size: cover; /* Ensures the image covers the entire element */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    
                 flex-direction: column;
                 position: absolute;
                 top: 66px;
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color:  #1F1F2E; 
+                background-color: #1F1F2E; 
                 padding: 100px;
                 z-index: 999;
-       
-                
-                justify-content: left; 
+                justify-content: flex-start; 
             }
             .menu.show {
                 display: flex;
             }
             
-     .menu-toggle {
-    display: block; /* Ensure the hamburger icon is visible */
-    cursor: pointer;
-}
+            .menu-toggle {
+                display: block;
+            }
 
-.menu-toggle .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #EAEAEA; /* Adjust color if needed */
-    margin: 4px auto; /* Space between bars */
-    transition: background-color 0.3s ease;
-}
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header img {
+                height: 40px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
         }
-        
-        @media only screen and (max-width: 768px) {
-    .header h1 {
-        font-size: 24px; /* Adjust this size as needed */
-    }
-    
-    .header img {
-        height: 40px; /* Adjust logo size for mobile */
-    }
-
-    nav a {
-        font-size: 16px; /* Smaller font size for navigation links */
-    }
-}
     </style>
 </head>
-
 <body>
-    <div class="background-video">
-        <video playsinline muted preload="metadata" autoplay loop>
-            <source src="code.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="header">
-        <div class="header-content">
-            <img src="logo3.png" alt="Sigma Lab Logo">
-            <h1>SIGMA LAB</h1>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-           <nav class="menu">
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#services">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="index.html#contact">Contact</a>
-</nav>
-    </div>
 
-<!-- Hero Section -->
+<div class="background-video">
+    <video playsinline muted preload="metadata" autoplay loop>
+        <source src="code.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
+<!-- Header -->
+<div class="header">
+    <div class="header-content">
+        <img src="logo3.png" alt="Sigma Lab Logo">
+        <h1>SIGMA LAB</h1>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
 
 <!-- Hero Section -->
 <section class="hero" id="home">
-  <div class="container" style="text-align: center;">
-    <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 10px;">
-    <h1 style="margin-bottom: 450px;">SIGMA LAB</h1>
-  </div>
+    <div class="container">
+        <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 10px;">
+        <h1>SIGMA LAB</h1>
+        <p>Business & Policy Consulting for Executives, Government & Nonprofit Leaders</p>
+    </div>
 </section>
-
-  
-<!-- About Section -->
-<section class="container section" id="about"><!-- Black Overlay for About and Services Sections -->
- 
 
 <!-- About Section -->
 <section class="container section" id="about">
-  <h2>About</h2>
-
-  <div class="paragraph-list">
-    <p>
-      Welcome to <strong>Sigma Lab</strong>, a community-driven coding platform designed to empower aspiring developers and tech enthusiasts. Our mission is to create an engaging environment where individuals can collaborate, innovate, and grow together through shared coding projects and meaningful interactions.
-    </p>
-    <p>
-      At Sigma Lab, we believe in the power of community. By integrating platforms like Discord, we facilitate real-time communication, enabling members to share ideas, tackle challenges, and develop projects collaboratively. Our partnership with universities allows us to offer internship credits, enhancing participants' academic profiles while providing them with valuable hands-on experience.
-    </p>
-    <p>
-      Whether you're looking to sharpen your coding skills, build a portfolio, or network with industry professionals, Sigma Lab serves as your launchpad for success in the tech sector.
-    </p>
-  </div>
+    <h2>About Sigma Lab</h2>
+    <div class="paragraph-list">
+        <p>Sigma Lab is a boutique consulting firm that delivers actionable business and policy solutions to executives and organizations across government, nonprofit, and private sectors.</p>
+        <p>We specialize in strategic planning, policy analysis, organizational optimization, and stakeholder engagement—helping leaders make informed decisions with confidence and clarity.</p>
+        <p>Our approach combines deep research, operational expertise, and hands-on guidance, ensuring strategies are effectively implemented and measurable results are achieved.</p>
+    </div>
 </section>
 
 <!-- Services Section -->
-<!-- Services Section -->
-<section class="container section" id="services" style="text-align: center;">
-  <h2>Services</h2>
-
-  <div class="paragraph-list">
-    <ul style="list-style-type: none; padding: 0; display: inline-block;">
-      <p><strong>Online Coding Community:</strong> Join our vibrant platform where volunteers can collaborate on exciting coding projects. Engage with fellow developers, share knowledge, and learn from each other in a supportive atmosphere.</p>
-      <p><strong>Discord Integration:</strong> Utilize Discord as our primary hub for communication and collaboration. Participate in real-time discussions, coordinate projects, and foster a sense of belonging within our community.</p>
-      <p><strong>Internship Credit:</strong> We partner with universities to provide participants with extracurricular credits for their involvement in coding projects, enhancing their resumes and academic profiles.</p>
-      <p><strong>Hackathons and Challenges:</strong> Participate in regular coding challenges and hackathons designed to ignite creativity and teamwork. Compete for prizes sponsored by tech companies and showcase your skills.</p>
-      <p><strong>Workshops and Courses:</strong> We offer a range of paid workshops and courses on coding, project management, and specific technologies, leveraging the expertise within our community to enhance learning opportunities.</p>
-      <p><strong>Project Showcase:</strong> Members can showcase their completed projects, fostering a sense of achievement and attracting more participants to the community.</p>
-    </ul>
-<section>
-
-  <p>
-    At Sigma Lab, we are committed to bridging the gap between education and the tech job market, creating a supportive ecosystem that nurtures growth and innovation. Join us today and start your journey toward becoming a successful tech professional.</p> 
-    <p>Start now by joining our team on Discord and Github!</p>
-
-  <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <a href="https://discord.gg/vkmTahfB" target="_blank" style="display: inline-block; margin: 0 10px; transition: transform 0.3s;">
-      <img src="discord-white-icon.png" alt="Discord" style="width: 50px; height: 50px; transition: transform 0.3s;">
-    </a>
-    <a href="https://github.com/SigmaLabTechnologies" target="_blank" style="display: inline-block; margin: 0 10px; transition: transform 0.3s;">
-      <img src="github-logo.png" alt="GitHub" style="width: 50px; height: 50px; transition: transform 0.3s;">
-    </a>
-  </div>
+<section class="container section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-list">
+        <ul>
+            <li><strong>Policy Analysis & Advisory:</strong> In-depth review of legislation and organizational policies to provide clear, actionable recommendations.</li>
+            <li><strong>Strategic Planning:</strong> Crafting and implementing strategies aligned with organizational goals and stakeholder priorities.</li>
+            <li><strong>Organizational Consulting:</strong> Optimizing workflows, reporting structures, and decision-making processes.</li>
+            <li><strong>Stakeholder & Government Relations:</strong> Expert guidance for navigating complex organizational and political landscapes.</li>
+            <li><strong>Workshops & Executive Training:</strong> Customized programs to upskill teams in leadership, operational efficiency, and policy understanding.</li>
+        </ul>
+    </div>
 </section>
 
-       <section class="container" id="contact">
-        <div class="contact-form">
-            <h2>Contact</h2>
-            <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section class="container" id="contact">
+    <div class="contact-form">
+        <h2>Contact</h2>
+        <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+</section>
 
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 3px 0;">
-            <a href="https://discord.com" target="_blank" style="display: inline-block; margin: 0 3px;">
-                <img src="discord-white-icon.png" alt="Discord" style="width: 32px; height: 32px;">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fab fa-facebook-square" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fab fa-instagram" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <i class="fab fa-youtube" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-            <a href="https://www.google.com" target="_blank">
-                <i class="fab fa-google" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-            <a href="https://www.spotify.com" target="_blank">
-                <i class="fab fa-spotify" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <i class="fab fa-linkedin" style="font-size: 30px; margin: 0 3px;"></i>
-            </a>
-        </div>
-        <div>
-            <h4>&copy; 2024 Sigma Lab Technologies.</h4> 
-            <h4>All rights reserved.</h4>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 3px 0;">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" style="font-size: 30px; margin: 0 3px;"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square" style="font-size: 30px; margin: 0 3px;"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="font-size: 30px; margin: 0 3px;"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="font-size: 30px; margin: 0 3px;"></i></a>
+    </div>
+    <div>
+        <h4>&copy; 2026 Sigma Lab Technologies. All rights reserved.</h4>
+    </div>
+</footer>
 
-<!-- Contact Form Submission Script -->
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    var form = event.target;
-    var data = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset(); // Clear the form fields
-        document.getElementById('status').textContent = 'Thank you for submitting!';
-      } else {
-        document.getElementById('status').textContent = 'There was a problem submitting your form. Please try again!';
-      }
-    };
-    xhr.send(data);
-  });
+    // Contact Form Submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var form = event.target;
+        var data = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                alert('Thank you for your message!');
+            } else {
+                alert('There was a problem submitting your form. Please try again.');
+            }
+        };
+        xhr.send(data);
+    });
 
-  // Toggle Menu Function
-  function toggleMenu() {
-    var menu = document.querySelector('.menu');
-    menu.classList.toggle('show');
-  }
+    // Toggle Menu
+    function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        menu.classList.toggle('show');
+    }
 </script>
-
 </body>
 </html>
