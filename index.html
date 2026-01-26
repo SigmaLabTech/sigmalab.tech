@@ -1,379 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigma Lab | Business & Policy Consulting</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Apex&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #0E0E16;
-            color: #EAEAEA;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SigmaLab is a boutique consulting practice specializing in political marketing and business analytics for campaigns and executives facing high-stakes decisions.">
+<link rel="icon" href="images/favicon.ico">
+<link rel="canonical" href="https://sigmalab.tech/">
+<meta property="og:title" content="SigmaLab | Political Marketing & Business Analytics Consulting">
+<meta property="og:description" content="Boutique consulting for campaigns and executives facing high-stakes decisions.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/social-share.jpg">
+<meta property="og:url" content="https://sigmalab.tech/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SigmaLab | Political Marketing & Business Analytics Consulting">
+<meta name="twitter:description" content="Boutique consulting for campaigns and executives facing high-stakes decisions.">
+<meta name="twitter:image" content="images/social-share.jpg">
 
-        h1, h2, h3 {
-            margin-top: 0;
-            text-align: center;
-        }
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-family: 'Apex', sans-serif;
-        }
+<title>SigmaLab | Political Marketing & Business Analytics Consulting</title>
 
-        h2 {
-            font-size: 36px;
-            margin-top: 0;
-        }
+<style>
+/* ==========================
+   Reset & Fonts
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-        p {
-            margin-top: 0;
-            text-align: center; 
-            font-size: 18px; 
-        }
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  min-height: 100vh;
+}
 
-        h4 {
-            margin-top: 0;
-            text-align: center;
-            font-size: 12px; 
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #1F1F2E;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            margin-right: auto;
-        }
+.navbar .logo {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
 
-        .header img {
-            height: 50px;
-            margin-right: 10px;
-        }
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
 
-        .header h1 {
-            font-size: 24px;
-            margin: 5px 0;
-        }
+.navbar .nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
 
-        nav {
-            text-align: center;
-        }
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.25s ease;
+}
 
-        nav a {
-            color: #EAEAEA;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
 
-        nav a:hover {
-            color: #4B9CD3;
-        }
+.navbar .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  background-image: url('images/startup.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 0 2rem;
+  text-align: center;
+}
 
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-        }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-        .menu-toggle .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #EAEAEA;
-            margin: 4px auto;
-            transition: background-color 0.3s ease;
-        }
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            background-image: url('northern-lights.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            color: #EAEAEA;
-            height: 110vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+.hero .btn {
+  display: inline-flex;
+  margin: 0 auto;
+  display: inline-flex;        /* NOT block */
+  width: fit-content;          /* critical */
+  max-width: max-content;      /* extra safety */
+  white-space: nowrap;         /* prevents wrapping */
 
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 
-        .hero h1 {
-            font-size: 47px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
 
-        .hero p {
-            font-size: 24px;
-            margin-bottom: 40px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
 
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            filter: drop-shadow(16px 16px 20px blue) opacity(50%);
-        }
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
 
-        section.container {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+.hero .btn:hover,
+.hero .btn:focus {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-1px);
 
-        .section h2 {
-            margin-bottom: 40px;
-            color: #4B9CD3;
-        }
+}
+/* ==========================
+   Sections
+========================== */
+section {
+  padding: 5rem 2rem;
+}
 
-        .paragraph-list p {
-            margin-bottom: 20px;
-            text-align: left;
-            line-height: 1.6;
-            font-size: 18px;
-        }
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
 
-        .services-list ul {
-            list-style-type: none;
-            padding: 0;
-        }
+p.center {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
 
-        .services-list li {
-            margin-bottom: 15px;
-        }
+/* ==========================
+   Grid System
+========================== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
 
-        .contact-form {
-            background-color: transparent;
-            padding: 40px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.grid-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
 
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            width: 100%;
-            max-width: 400px;
-            min-width: 300px;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #4B9CD3;
-            border-radius: 4px;
-            background-color: #2A2A39;
-            color: #EAEAEA;
-            font-size: 16px;
-        }
+.grid-item:hover {
+  transform: translateY(-5px);
+}
 
-        .contact-form input[type="submit"] {
-            padding: 12px 0;
-            background-color: #4B9CD3;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            max-width: 400px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
+.grid-item img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
 
-        .contact-form input[type="submit"]:hover {
-            background-color: #357B9C;
-        }
+.grid-item h3 {
+  margin: 1rem 0 0.5rem;
+}
 
-        footer {
-            background-color: transparent;
-            padding: 40px;
-            text-align: center;
-            color: #EAEAEA;
-        }
+.grid-item p {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+}
 
-        @media only screen and (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 66px;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #1F1F2E; 
-                padding: 100px;
-                z-index: 999;
-                justify-content: flex-start; 
-            }
-            .menu.show {
-                display: flex;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
+/* ==========================
+   Skills Bars
+========================== */
+.skill-bar {
+  margin-bottom: 1rem;
+}
 
-            .header h1 {
-                font-size: 20px;
-            }
+.skill-bar span {
+  display: block;
+  font-weight: bold;
+}
 
-            .header img {
-                height: 40px;
-            }
+.skill-bar .bar-bg {
+  width: 100%;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-            nav a {
-                font-size: 16px;
-            }
-        }
-    </style>
+.skill-bar .bar-fill {
+  height: 20px;
+  width: 0;
+  background: #333;
+  border-radius: 20px;
+  text-align: right;
+  line-height: 20px;
+  color: white;
+  padding-right: 5px;
+  transition: width 1s ease-in-out;
+}
+
+
+/* ==========================
+   Contact Form
+========================== */
+form input, form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* ==========================
+   Modal
+========================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+}
+
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
 </head>
 <body>
 
-<div class="background-video">
-    <video playsinline muted preload="metadata" autoplay loop>
-        <source src="code.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+<!-- Navbar -->
+<nav class="navbar">
 
-<!-- Header -->
-<div class="header">
-    <div class="header-content">
-        <img src="logo3.png" alt="Sigma Lab Logo">
-        <h1>SIGMA LAB</h1>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <nav class="menu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</div>
+<a href="#home">
+    <img src="images/sigmalab.png" alt="SigmaLab Logo" class="logo">
+  </a>
 
-<!-- Hero Section -->
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+<!-- Hero -->
 <section class="hero" id="home">
-    <div class="container">
-        <img src="logo3.png" alt="Sigma Lab Logo" style="height: 200px; margin-bottom: 10px;">
-        <h1>SIGMA LAB</h1>
-        <p>Business & Policy Consulting for Executives, Government & Nonprofit Leaders</p>
-    </div>
+  <h1>Political Marketing & Business Consulting</h1>
+  <p>Data-driven strategy for high-stakes decisions.</p>
+  <a href="#about" class="btn">Learn more and start today</a>
 </section>
 
-<!-- About Section -->
-<section class="container section" id="about">
-    <h2>About Sigma Lab</h2>
-    <div class="paragraph-list">
-        <p>Sigma Lab is a boutique consulting firm that delivers actionable business and policy solutions to executives and organizations across government, nonprofit, and private sectors.</p>
-        <p>We specialize in strategic planning, policy analysis, organizational optimization, and stakeholder engagement—helping leaders make informed decisions with confidence and clarity.</p>
-        <p>Our approach combines deep research, operational expertise, and hands-on guidance, ensuring strategies are effectively implemented and measurable results are achieved.</p>
+<section id="about">
+  <h2>ABOUT THE COMPANY</h2>
+  <p class="center">SigmaLab is a boutique consulting practice specializing in political marketing and business analytics. We help campaigns, organizations, and executives turn complex data into clear strategy—and strategy into measurable results.</p>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Political Marketing & Campaign Strategy</h3>
+      <p>We support political campaigns, advocacy groups, and issue-driven organizations with analytical insight and strategic execution.</p>
     </div>
+    <div class="grid-item">
+      <h3>Business Analytics Consulting</h3>
+      <p>We help businesses turn complex data into actionable insights, driving smarter decisions and measurable results.</p>
+    </div>
+    <div class="grid-item">
+      <h3>How We Work</h3>
+      <p>SigmaLab operates as a sole proprietorship, offering senior-level expertise with hands-on execution. No layers, no handoffs, no junior analysts learning on your budget.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Engagements</h3>
+      <p>Projects range from short-term analytical sprints to ongoing advisory relationships. Engagements are tailored based on scope, timeline, and sensitivity.</p>
+      <p>If you’re facing a decision where accuracy matters more than comfort, SigmaLab can help.</p>
+    </div>
+  </div>
 </section>
 
-<!-- Services Section -->
-<section class="container section" id="services">
-    <h2>Our Services</h2>
-    <div class="services-list">
-        <ul>
-            <li><strong>Policy Analysis & Advisory:</strong> In-depth review of legislation and organizational policies to provide clear, actionable recommendations.</li>
-            <li><strong>Strategic Planning:</strong> Crafting and implementing strategies aligned with organizational goals and stakeholder priorities.</li>
-            <li><strong>Organizational Consulting:</strong> Optimizing workflows, reporting structures, and decision-making processes.</li>
-            <li><strong>Stakeholder & Government Relations:</strong> Expert guidance for navigating complex organizational and political landscapes.</li>
-            <li><strong>Workshops & Executive Training:</strong> Customized programs to upskill teams in leadership, operational efficiency, and policy understanding.</li>
-        </ul>
-    </div>
-</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <span id="modalClose" style="position:absolute;top:20px;right:35px;font-size:40px;color:white;cursor:pointer;">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
 
 <!-- Contact Section -->
-<section class="container" id="contact">
-    <div class="contact-form">
-        <h2>Contact</h2>
-        <form id="contact-form" method="post" action="https://formspree.io/f/xeojyyeb">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message">
-        </form>
-    </div>
+<section id="contact">
+  <h2>CONTACT</h2>
+  <p>Let’s talk.
+For inquiries, proposals, or confidential discussions:</p>
+  <form action="https://formspree.io/f/xeojyyeb" method="POST">
+    <input type="text" name="Name" placeholder="Name" required>
+    <input type="text" name="Email" placeholder="Email" required>
+    <input type="text" name="Subject" placeholder="Subject" required>
+    <textarea name="Message" placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
 </section>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 3px 0;">
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" style="font-size: 30px; margin: 0 3px;"></i></a>
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square" style="font-size: 30px; margin: 0 3px;"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="font-size: 30px; margin: 0 3px;"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="font-size: 30px; margin: 0 3px;"></i></a>
-    </div>
-    <div>
-        <h4>&copy; 2026 Sigma Lab Technologies. All rights reserved.</h4>
-    </div>
+<footer>
+  <p>&copy;2026 sigmalab.tech</p>
 </footer>
 
 <script>
-    // Contact Form Submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var form = event.target;
-        var data = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open(form.method, form.action);
-        xhr.setRequestHeader('Accept', 'application/json');
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState !== XMLHttpRequest.DONE) return;
-            if (xhr.status === 200) {
-                form.reset();
-                alert('Thank you for your message!');
-            } else {
-                alert('There was a problem submitting your form. Please try again.');
-            }
-        };
-        xhr.send(data);
-    });
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+});
+// Modal for images
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
 
-    // Toggle Menu
-    function toggleMenu() {
-        var menu = document.querySelector('.menu');
-        menu.classList.toggle('show');
-    }
+document.querySelectorAll('.grid-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalCaption.textContent = img.alt;
+  });
+});
+
+document.getElementById('modalClose').onclick = () => {
+  modal.style.display = 'none';
+};
 </script>
 </body>
 </html>
-
