@@ -4,21 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SigmaLab is a boutique consulting practice specializing in political marketing and business analytics for campaigns and executives facing high-stakes decisions.">
-<link rel="icon" href="favicon.ico">
+
+<!-- Favicons -->
+<link rel="icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+
+<!-- SEO / Social -->
 <link rel="canonical" href="https://sigmalab.tech/">
 <meta property="og:title" content="SigmaLab | Political Marketing & Business Analytics Consulting">
 <meta property="og:description" content="Boutique consulting for campaigns and executives facing high-stakes decisions.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="social-share.jpg">
+<meta property="og:image" content="images/social-share.jpg">
 <meta property="og:url" content="https://sigmalab.tech/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SigmaLab | Political Marketing & Business Analytics Consulting">
 <meta name="twitter:description" content="Boutique consulting for campaigns and executives facing high-stakes decisions.">
-<meta name="twitter:image" content="social-share.jpg">
-
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<meta name="twitter:image" content="images/social-share.jpg">
 
 <title>SigmaLab | Political Marketing & Business Analytics Consulting</title>
 
@@ -26,77 +29,32 @@
 /* ==========================
    Reset & Fonts
 ========================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Raleway', sans-serif;
-  line-height: 1.8;
-  min-height: 100vh;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Raleway', sans-serif; line-height: 1.8; min-height: 100vh; }
+html { scroll-behavior: smooth; }
 
 /* ==========================
    Navbar
 ========================== */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed; top: 0; width: 100%; background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 999;
+  display: flex; justify-content: space-between; align-items: center;
   padding: 0.5rem 1rem;
 }
-
-.navbar .logo {
-  height: 40px;
-  width: auto;
-  cursor: pointer;
-}
-
-.navbar .nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
+.navbar .logo { height: 40px; width: auto; cursor: pointer; }
+.navbar .nav-links { display: flex; gap: 1.5rem; }
 .navbar .nav-links a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  padding: 0.25rem 0;
-  font-weight: 500;
+  position: relative; text-decoration: none; color: black;
+  padding: 0.25rem 0; font-weight: 500;
 }
-
 .navbar .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: black;
+  content: ""; position: absolute; left: 0; bottom: -2px;
+  width: 0; height: 2px; background: black;
   transition: width 0.25s ease;
 }
-
-.navbar .nav-links a:hover::after {
-  width: 100%;
-}
-
-.navbar .hamburger {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+.navbar .nav-links a:hover::after { width: 100%; }
+.navbar .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
 
 /* ==========================
    Hero Section
@@ -114,238 +72,69 @@ html {
   padding: 0 2rem;
   text-align: center;
 }
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
 .hero .btn {
-  display: inline-flex;
-  margin: 0 auto;
-  display: inline-flex;        /* NOT block */
-  width: fit-content;          /* critical */
-  max-width: max-content;      /* extra safety */
-  white-space: nowrap;         /* prevents wrapping */
-
-  padding: 0.6rem 1.4rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.2s ease;
+  display: inline-flex; width: fit-content; max-width: max-content;
+  white-space: nowrap; padding: 0.6rem 1.4rem; font-size: 0.85rem;
+  font-weight: 600; letter-spacing: 0.02em; background-color: #000;
+  color: #fff; text-decoration: none; border-radius: 999px;
+  border: none; cursor: pointer; transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
+.hero .btn:hover, .hero .btn:focus { background-color: #fff; color: #000; transform: translateY(-1px); }
 
-.hero .btn:hover,
-.hero .btn:focus {
-  background-color: #fff;
-  color: #000;
-  transform: translateY(-1px);
-
-}
 /* ==========================
    Sections
 ========================== */
-section {
-  padding: 5rem 2rem;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-p.center {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-}
+section { padding: 5rem 2rem; }
+h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+p.center { text-align: center; font-size: 1.2rem; margin-bottom: 3rem; }
 
 /* ==========================
    Grid System
 ========================== */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
+.grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
 .grid-item {
-  flex: 1 1 250px;
-  max-width: 300px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  flex: 1 1 250px; max-width: 300px; background: #f9f9f9;
+  border-radius: 10px; overflow: hidden; text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: 0.3s;
 }
-
-.grid-item:hover {
-  transform: translateY(-5px);
-}
-
-.grid-item img {
-  width: 100%;
-  display: block;
-  cursor: pointer;
-}
-
-.grid-item h3 {
-  margin: 1rem 0 0.5rem;
-}
-
-.grid-item p {
-  padding: 0 1rem 1rem;
-  font-size: 0.9rem;
-}
-
-/* ==========================
-   Skills Bars
-========================== */
-.skill-bar {
-  margin-bottom: 1rem;
-}
-
-.skill-bar span {
-  display: block;
-  font-weight: bold;
-}
-
-.skill-bar .bar-bg {
-  width: 100%;
-  background: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.skill-bar .bar-fill {
-  height: 20px;
-  width: 0;
-  background: #333;
-  border-radius: 20px;
-  text-align: right;
-  line-height: 20px;
-  color: white;
-  padding-right: 5px;
-  transition: width 1s ease-in-out;
-}
-
+.grid-item:hover { transform: translateY(-5px); }
+.grid-item img { width: 100%; display: block; cursor: pointer; }
+.grid-item h3 { margin: 1rem 0 0.5rem; }
+.grid-item p { padding: 0 1rem 1rem; font-size: 0.9rem; }
 
 /* ==========================
    Contact Form
 ========================== */
-form input, form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: black;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
+form input, form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+form button { padding: 0.8rem 1.5rem; border: none; background: black; color: white; cursor: pointer; border-radius: 5px; }
 
 /* ==========================
    Footer
 ========================== */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  margin-top: 1rem;
-  display: inline-block;
-}
+footer { background: #111; color: white; text-align: center; padding: 3rem 1rem; }
+footer a { color: white; text-decoration: none; margin-top: 1rem; display: inline-block; }
 
 /* ==========================
    Modal
 ========================== */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  display: none; position: fixed; z-index: 1000; padding-top: 60px;
+  left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
   background-color: rgba(0,0,0,0.9);
 }
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-}
-
-.modal-caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  text-align: center;
-  color: white;
-  padding: 10px 0;
-}
+.modal-content { margin: auto; display: block; max-width: 90%; }
+.modal-caption { margin: auto; display: block; width: 80%; text-align: center; color: white; padding: 10px 0; }
 
 /* ==========================
    Responsive
 ========================== */
 @media (max-width: 768px) {
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background: white;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
-  }
-
-  .navbar .nav-links.show {
-    display: flex;
-  }
-
-  .navbar .hamburger {
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
+  .navbar .nav-links { display: none; flex-direction: column; gap: 0; background: white; width: 100%; position: absolute; top: 60px; left: 0; padding: 1rem 0; border-top: 1px solid #ddd; }
+  .navbar .nav-links.show { display: flex; }
+  .navbar .hamburger { display: block; }
+  .hero h1 { font-size: 2rem; }
 }
 </style>
 </head>
@@ -353,11 +142,9 @@ footer a {
 
 <!-- Navbar -->
 <nav class="navbar">
-
-<a href="#home">
-    <img src="sigmalab.png" alt="SigmaLab Logo" class="logo">
+  <a href="#home">
+    <img src="images/sigmalab.png" alt="SigmaLab Logo" class="logo">
   </a>
-
   <div class="nav-links" id="navLinks">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -373,6 +160,7 @@ footer a {
   <a href="#about" class="btn">Learn more and start today</a>
 </section>
 
+<!-- About Section -->
 <section id="about">
   <h2>ABOUT THE COMPANY</h2>
   <p class="center">SigmaLab is a boutique consulting practice specializing in political marketing and business analytics. We help campaigns, organizations, and executives turn complex data into clear strategy—and strategy into measurable results.</p>
@@ -397,19 +185,10 @@ footer a {
   </div>
 </section>
 
-
-<!-- Modal -->
-<div id="modal" class="modal">
-  <span id="modalClose" style="position:absolute;top:20px;right:35px;font-size:40px;color:white;cursor:pointer;">&times;</span>
-  <img class="modal-content" id="modalImg">
-  <div class="modal-caption" id="modalCaption"></div>
-</div>
-
 <!-- Contact Section -->
 <section id="contact">
   <h2>CONTACT</h2>
-  <p>Let’s talk.
-For inquiries, proposals, or confidential discussions:</p>
+  <p>Let’s talk. For inquiries, proposals, or confidential discussions:</p>
   <form action="https://formspree.io/f/xeojyyeb" method="POST">
     <input type="text" name="Name" placeholder="Name" required>
     <input type="text" name="Email" placeholder="Email" required>
@@ -417,42 +196,20 @@ For inquiries, proposals, or confidential discussions:</p>
     <textarea name="Message" placeholder="Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
-
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>&copy;2026 sigmalab.tech</p>
+  <p>&copy; 2026 sigmalab.tech</p>
 </footer>
 
 <script>
 // Hamburger toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-  });
-});
-// Modal for images
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modalImg');
-const modalCaption = document.getElementById('modalCaption');
-
-document.querySelectorAll('.grid-item img').forEach(img => {
-  img.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImg.src = img.src;
-    modalCaption.textContent = img.alt;
-  });
-});
-
-document.getElementById('modalClose').onclick = () => {
-  modal.style.display = 'none';
-};
+hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('show'); }); });
 </script>
+
 </body>
 </html>
